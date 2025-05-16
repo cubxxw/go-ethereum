@@ -80,6 +80,10 @@ func (b *testBackend) GetReceiptsByHash(hash common.Hash) types.Receipts {
 	return r
 }
 
+func (b *testBackend) GetRawReceipts(hash common.Hash, number uint64) types.Receipts {
+	return rawdb.ReadRawReceipts(b.db, hash, number)
+}
+
 func (b *testBackend) HeaderByNumber(ctx context.Context, blockNr rpc.BlockNumber) (*types.Header, error) {
 	var (
 		hash common.Hash
