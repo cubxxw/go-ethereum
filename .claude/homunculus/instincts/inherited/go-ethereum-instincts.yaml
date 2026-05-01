@@ -1,0 +1,451 @@
+# Instincts generated from https://github.com/cubxxw/go-ethereum
+# Generated: 2026-05-01T19:20:44.444Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: go-ethereum-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Commit Length
+
+## Action
+
+Write moderate-length commit messages (~60 characters)
+
+## Evidence
+
+- Average commit message length: 60 chars
+- Based on 6 commits
+
+---
+id: go-ethereum-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: go-ethereum-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: go-ethereum-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: go-ethereum-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: go-ethereum-workflow-feature-implementation-with-tests
+trigger: "when doing feature implementation with tests"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Workflow Feature Implementation With Tests
+
+## Action
+
+Follow the feature-implementation-with-tests workflow:
+1. Modify or add implementation files to introduce or update functionality
+2. Modify or add corresponding test files to cover the new or changed functionality
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: */*.go, */*_test.go
+
+---
+id: go-ethereum-workflow-api-or-client-model-update-with-generated-code
+trigger: "when doing api or client model update with generated code"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Workflow Api Or Client Model Update With Generated Code
+
+## Action
+
+Follow the api-or-client-model-update-with-generated-code workflow:
+1. Modify API/client implementation file
+2. Regenerate code artifacts (e.g., using code generation tools)
+3. Update or add related test files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: ethclient/*.go, ethclient/*_test.go, ethclient/gen_*.go
+
+---
+id: go-ethereum-workflow-bugfix-with-targeted-test-update
+trigger: "when doing bugfix with targeted test update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Workflow Bugfix With Targeted Test Update
+
+## Action
+
+Follow the bugfix-with-targeted-test-update workflow:
+1. Modify the implementation file to fix the bug
+2. Modify or add a specific test file to cover the fixed behavior
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: */*.go, */*_test.go
+
+---
+id: go-ethereum-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct File Naming
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in files: trie/snapshot.go, core/state.go
+
+---
+id: go-ethereum-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in files: ethclient/client.go
+- Go conventions
+
+---
+id: go-ethereum-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in files: core/types.go
+
+---
+id: go-ethereum-instinct-class-naming
+trigger: "When defining a struct or type"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Class Naming
+
+## Action
+
+Use PascalCase for struct/type names
+
+## Evidence
+
+- Pattern in files: trie/trie.go
+- Go conventions
+
+---
+id: go-ethereum-instinct-import-style
+trigger: "When importing packages"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in files: ethclient/client.go
+
+---
+id: go-ethereum-instinct-export-style
+trigger: "When exporting functions or types"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Export Style
+
+## Action
+
+Use named exports (export only what is needed)
+
+## Evidence
+
+- Pattern in files: trie/trie.go
+
+---
+id: go-ethereum-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Test Location
+
+## Action
+
+Place tests in separate *_test.go files in the same package
+
+## Evidence
+
+- Pattern in files: trie/trie_test.go
+- core/state_test.go
+
+---
+id: go-ethereum-instinct-test-update-on-feature
+trigger: "When adding or modifying a feature"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Test Update On Feature
+
+## Action
+
+Add or update corresponding tests to cover the new or changed functionality
+
+## Evidence
+
+- Workflow: feature-implementation-with-tests
+- Commits: core/state/snapshot: fix condition in iterator traversal test (#34638)
+
+---
+id: go-ethereum-instinct-test-update-on-bugfix
+trigger: "When fixing a bug"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Test Update On Bugfix
+
+## Action
+
+Add or update a targeted test to verify the fix
+
+## Evidence
+
+- Workflow: bugfix-with-targeted-test-update
+- Commits: eth/tracers: fix evm trace for t8n (#34862)
+
+---
+id: go-ethereum-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Commit Prefix
+
+## Action
+
+Prefix the commit message with the affected package or component (e.g., 'trie:', 'ethclient:')
+
+## Evidence
+
+- Pattern in commits: trie: group 2^N binary trie nodes in serialization (#34794)
+- ethclient: add maxUsedGas to simulate call results (#34820)
+
+---
+id: go-ethereum-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 60 characters
+
+## Evidence
+
+- Average commit message length: 60
+
+---
+id: go-ethereum-instinct-feature-with-tests
+trigger: "When adding or modifying a feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Feature With Tests
+
+## Action
+
+Modify or add implementation files and corresponding test files
+
+## Evidence
+
+- Workflow: feature-implementation-with-tests
+- Commits: core/state/snapshot: fix condition in iterator traversal test (#34638)
+
+---
+id: go-ethereum-instinct-api-client-model-update
+trigger: "When updating API/client models"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Api Client Model Update
+
+## Action
+
+Modify API/client implementation, regenerate code artifacts, and update related tests
+
+## Evidence
+
+- Workflow: api-or-client-model-update-with-generated-code
+- Pattern in files: ethclient/gen_*.go
+
+---
+id: go-ethereum-instinct-bugfix-with-test
+trigger: "When fixing a bug"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Bugfix With Test
+
+## Action
+
+Modify the implementation file and add or update a specific test file to cover the fixed behavior
+
+## Evidence
+
+- Workflow: bugfix-with-targeted-test-update
+- Commits: core/state/snapshot: fix condition in iterator traversal test (#34638)
+
