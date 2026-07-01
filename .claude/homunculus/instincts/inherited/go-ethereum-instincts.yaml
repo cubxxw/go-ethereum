@@ -1,0 +1,334 @@
+# Instincts generated from https://github.com/cubxxw/go-ethereum
+# Generated: 2026-07-01T13:20:51.166Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: go-ethereum-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Commit Length
+
+## Action
+
+Write moderate-length commit messages (~59 characters)
+
+## Evidence
+
+- Average commit message length: 59 chars
+- Based on 6 commits
+
+---
+id: go-ethereum-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: go-ethereum-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: go-ethereum-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: go-ethereum-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: go-ethereum-workflow-feature-implementation-with-associated-tests
+trigger: "when doing feature implementation with associated tests"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Workflow Feature Implementation With Associated Tests
+
+## Action
+
+Follow the feature-implementation-with-associated-tests workflow:
+1. Implement the new feature or migration logic in the relevant source file(s).
+2. Add or update corresponding test file(s) to cover the new logic.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: core/txpool/blobpool/limbo.go, core/txpool/blobpool/limbo_test.go, consensus/misc/eip4844/eip4844.go
+
+---
+id: go-ethereum-workflow-multi-module-parameter-or-config-update
+trigger: "when doing multi module parameter or config update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Workflow Multi Module Parameter Or Config Update
+
+## Action
+
+Follow the multi-module-parameter-or-config-update workflow:
+1. Update configuration or parameter files.
+2. Update related logic in core or consensus modules.
+3. Update or add tests to reflect the new configuration or parameter logic.
+4. Update CLI or utility code if necessary.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: params/config.go, core/genesis.go, cmd/geth/chaincmd.go
+
+---
+id: go-ethereum-instinct-naming-conventions
+trigger: "When creating or renaming files, functions, classes, or constants in Go code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Naming Conventions
+
+## Action
+
+Use camelCase for files and functions, PascalCase for classes, and SCREAMING_SNAKE_CASE for constants
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions
+- Seen in files like core/txpool/blobpool/limbo.go, consensus/misc/eip4844/eip4844.go
+
+---
+id: go-ethereum-instinct-import-style
+trigger: "When importing Go packages within the repository"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+- Seen in source files across the repository
+
+---
+id: go-ethereum-instinct-export-style
+trigger: "When exporting symbols from a Go package"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Export Style
+
+## Action
+
+Use named exports (export only what is needed using capitalized identifiers)
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+- Seen in public API files like accounts/abi/abigen/abigen.go
+
+---
+id: go-ethereum-instinct-test-location
+trigger: "When adding or updating tests for a Go package"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Test Location
+
+## Action
+
+Place tests in separate *_test.go files alongside the source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+- Seen in core/txpool/blobpool/limbo_test.go, consensus/misc/eip4844/eip4844_test.go
+
+---
+id: go-ethereum-instinct-test-coverage-for-features
+trigger: "When implementing a new feature or migration"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Test Coverage For Features
+
+## Action
+
+Add or update corresponding test files to cover the new logic
+
+## Evidence
+
+- Workflow: feature-implementation-with-associated-tests
+- Seen in commit sequences for new features (e.g., limbo.go + limbo_test.go)
+
+---
+id: go-ethereum-instinct-git-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Git Commit Prefix
+
+## Action
+
+Prefix the commit message with the main module or folder (e.g., core:, params:, cmd:)
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Seen in commits like 'core: implement EIP-7928 spec change (#35260)'
+
+---
+id: go-ethereum-instinct-git-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Git Commit Length
+
+## Action
+
+Keep the commit message concise, around 59 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+- Seen in commit history
+
+---
+id: go-ethereum-instinct-feature-implementation-with-tests
+trigger: "When adding a new feature or migration and ensuring it is properly tested"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Feature Implementation With Tests
+
+## Action
+
+Implement the new logic in the relevant source file(s) and add/update corresponding test file(s)
+
+## Evidence
+
+- Workflow: feature-implementation-with-associated-tests
+- Seen in files: core/txpool/blobpool/limbo.go, core/txpool/blobpool/limbo_test.go
+
+---
+id: go-ethereum-instinct-multi-module-config-update
+trigger: "When changing protocol parameters, adding fork support, or updating global configuration affecting several components"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Multi Module Config Update
+
+## Action
+
+Update configuration or parameter files, related logic in core/consensus, tests, and CLI/utilities as needed
+
+## Evidence
+
+- Workflow: multi-module-parameter-or-config-update
+- Seen in files: params/config.go, core/genesis.go, cmd/geth/chaincmd.go, etc.
+
