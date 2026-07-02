@@ -1,0 +1,284 @@
+# Instincts generated from https://github.com/cubxxw/go-ethereum
+# Generated: 2026-07-02T13:20:44.891Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: go-ethereum-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Commit Length
+
+## Action
+
+Write moderate-length commit messages (~55 characters)
+
+## Evidence
+
+- Average commit message length: 55 chars
+- Based on 5 commits
+
+---
+id: go-ethereum-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: go-ethereum-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: go-ethereum-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: go-ethereum-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cubxxw/go-ethereum
+---
+
+# Go Ethereum Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: go-ethereum-instinct-file-naming
+trigger: "When creating a new source file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct File Naming
+
+## Action
+
+Name the file using snake_case
+
+## Evidence
+
+- Pattern in files: core/types.go, core/rawdb.go
+
+---
+id: go-ethereum-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in files: core/types.go
+- Pattern in Go codebase
+
+---
+id: go-ethereum-instinct-class-naming
+trigger: "When defining a new struct or type"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Class Naming
+
+## Action
+
+Use PascalCase for type names
+
+## Evidence
+
+- Pattern in files: core/types.go
+- Pattern in Go codebase
+
+---
+id: go-ethereum-instinct-constant-naming
+trigger: "When defining a new constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in files: core/types.go
+- Pattern in Go codebase
+
+---
+id: go-ethereum-instinct-import-style
+trigger: "When importing packages"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in files: core/types.go
+- Pattern in Go codebase
+
+---
+id: go-ethereum-instinct-export-style
+trigger: "When exporting functions or types"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Export Style
+
+## Action
+
+Use named exports (exported identifiers start with uppercase letter)
+
+## Evidence
+
+- Pattern in files: core/types.go
+- Pattern in Go codebase
+
+---
+id: go-ethereum-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Test Location
+
+## Action
+
+Place tests in separate files (typically *_test.go) within the same package
+
+## Evidence
+
+- Architecture: testLocation is 'separate'
+- Pattern in Go projects
+
+---
+id: go-ethereum-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Commit Format
+
+## Action
+
+Start with <folder(s)>: <description> (#<PR number>)
+
+## Evidence
+
+- Seen in commit: 'core/types: reduce allocs in CreateBloom (#35234)'
+- Seen in commit: 'cmd/devp2p: add already used flag crawlParallelismFlag (#35031)'
+
+---
+id: go-ethereum-instinct-commit-multi-folder
+trigger: "When a commit affects multiple folders"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: cubxxw/go-ethereum
+---
+
+# Go Ethereum Instinct Commit Multi Folder
+
+## Action
+
+List all affected folders, separated by commas, before the colon in the commit message
+
+## Evidence
+
+- Seen in commit: 'core, consensus/misc, params: implement EIP-7997 (#35223)'
+
